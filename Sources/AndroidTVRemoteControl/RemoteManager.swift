@@ -90,6 +90,7 @@ public class RemoteManager {
     }
     
     public func disconnect() {
+        secondConfigurationResponse = SecondConfigurationResponse()
         logger?.infoLog(logPrefix + "disconnect")
         connection?.stateUpdateHandler = nil
         connection?.cancel()
